@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en"  class=" md_page ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>Library Features - 土星环的图书馆</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/logo/yono_light.svg" alt="yono loge">
+                
+                
+                    <h2> wiki</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="sub_items active_parent"><a >API Doc</a><ul><li class="active"><a  href="/modbusX/en/">modbusX</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="https://www.yono233.cn">Blog</a></li>
+<li class="sub_items "><a  >Language: English</a><ul><li class="active"><a  href="/modbusX/en/overview/特性.html">English</a></li>
+<li class=""><a  href="/modbusX/zh_hans/overview/特性.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/modbusX/en/index.html"><span class="label">spec</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/modbusX/en/overview/特性.html"><span class="label">Library Features</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">Commonly Used APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apigengric/MBx_Ticks.html"><span class="label">MBx_Ticks</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Slave Used APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apislave/MBx_Slave_RTU_Init.html"><span class="label">MBx_Slave_RTU_Init</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apislave/MBx_Slave_TCP_Init.html"><span class="label">MBx_Slave_TCP_Init</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Master Used APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_RTU_Init.html"><span class="label">MBx_Master_RTU_Init</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Member_Add.html"><span class="label">MBx_Master_Member_Add</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Error_Get.html"><span class="label">MBx_Master_Error_Get</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/Master2Slave.html"><span class="label">Initiating requests to slave</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">utility</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/tools/用户配置文件.html"><span class="label">User Configuration</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>Library Features</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="Last modify date: 2024-12-04">
+                                    2024-12-04
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                            <div id="source_link">
+                                <a href="https://github.com/stbanana/doc-wiki/docs/modbusX/en/overview/特性.md" target="_blank">
+                                    Edit this page
+                                </a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <ol>
+<li>⚡ <strong>Non-blocking</strong>: Uses library ticks to prevent blocking.</li>
+<li>🪶 <strong>Thread-free</strong>: A single tick drives the entire master-slave chain, allowing for periodic execution of ticks in any manner.</li>
+<li>🌠 <strong>No interrupt usage</strong>: Free port binding allows for arbitrary management of data flow.</li>
+<li>💪 <strong>Multi-master and multi-slave</strong>: Any master or slave is an independent object, allowing for the activation of any number of masters and slaves in the program.</li>
+<li>🗽 <strong>Arbitrary mapping of register address tables to memory addresses</strong>: A key feature of this library, solving the mapping relationship between Modbus virtual addresses and actual variables, making development simpler and more flexible. The entire library usage revolves around this mapping table, and future maintenance will only require updates to the mapping table.</li>
+<li>⚖️ <strong>Different address mapping lookup times should not exceed 500 clock cycles</strong>: It is difficult to claim this has been fully achieved. Since Modbus has a maximum of 0xFFFF virtual addresses, a binary search method is used, but this is still not flexible enough. A better table lookup structure will be sought in the future (perhaps). This is a challenge for library upgrades; if you have any solutions, please contact me. Thank you very much! 😘</li>
+<li>🏃‍♀️ <strong>Restrained event callbacks</strong>: A minimal number of callback mechanisms. Stack polling is used as much as possible to minimize the impact on system timing.</li>
+</ol>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/modbusX/en/index.html">
+                            <span class="icon"></span>
+                            <span class="label">spec</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/modbusX/en/apidoc/apigengric/MBx_Ticks.html">
+                            <span class="label">MBx_Ticks</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://teedoc.neucrack.com">Build with teedoc</a></li>
+<li><a  href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</li>
+<li><a>Source code</a><ul><li><a target="_blank" href="https://github.com/stbanana">github</a></li>
+<li><a target="_blank" href="https://github.com/stbanana/doc-wiki">website source files</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://beian.miit.gov.cn"></a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
