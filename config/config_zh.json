@@ -1,28 +1,28 @@
 {
     "locale": "zh_CN",
-    "class": "language_zh",
+    "class": "md_page",
     "navbar": {
-        "title": "my_site",
+        "title": " wiki",
         "logo": {
-            "alt": "my_site logo",
-            "src": "/static/image/logo.png"
+            "alt": "yono loge",
+            "src": "/static/logo/yono_light.svg"
         },
         "home_url": "/",
         "items": [
             {
-                "url": "/get_started/zh/",
-                "label": "安装使用",
-                "position": "left"
+                "label": "API文档",
+                "position": "left",
+                "type": "list",
+                "items": [
+                    {
+                        "url": "/modbusX/zh_hans/",
+                        "label": "modbusX"
+                    }
+                ]
             },
             {
-                "url": "/blog/",
+                "url": "https://www.yono233.cn",
                 "label": "博客",
-                "position": "left"
-            },
-            {
-                "url": "https://github.com/neutree/teedoc",
-                "label": "github",
-                "target": "_blank",
                 "position": "right"
             },
             {
@@ -33,8 +33,8 @@
             }
         ]
     },
-    "footer":{
-        "top":[
+    "footer": {
+        "top": [
             {
                 "label": "链接",
                 "items": [
@@ -54,17 +54,12 @@
                 "items": [
                     {
                         "label": "github",
-                        "url": "https://github.com/neutree/teedoc",
-                        "target": "_blank"
-                    },
-                    {
-                        "label": "gitee",
-                        "url": "https://gitee.com/teedoc/teedoc",
+                        "url": "https://github.com/stbanana",
                         "target": "_blank"
                     },
                     {
                         "label": "本网站源文件",
-                        "url": "https://github.com/teedoc/teedoc.github.io",
+                        "url": "https://github.com/stbanana/doc-wiki",
                         "target": "_blank"
                     }
                 ]
@@ -72,19 +67,14 @@
         ],
         "bottom": [
             {
-                "label": "*ICP备********号",
+                "label": "",
                 "url": "https://beian.miit.gov.cn",
-                "target": "_blank"
-            },
-            {
-                "label": "*公网安备***********号",
-                "url": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=****************",
                 "target": "_blank"
             }
         ]
     },
     "plugins": {
-        "teedoc-plugin-search":{
+        "teedoc-plugin-search": {
             "config": {
                 "search_hint": "搜索",
                 "input_hint": "输入关键词，多关键词空格隔开",
@@ -95,5 +85,5 @@
             }
         }
     },
-    "show_source": "编辑本页"
+    "show_source": false
 }

@@ -1,0 +1,30 @@
+items:
+-   label: 规范
+    file: README.md
+-   label: 库特性
+    file: overview/特性.md
+-   label: 通用常用API
+    items:
+    -   label: MBx_Ticks
+        file: apidoc/apigengric/MBx_Ticks.md
+-   label: 从机常用API
+    items:
+    -   label: MBx_Slave_RTU_Init
+        file: apidoc/apislave/MBx_Slave_RTU_Init.md
+    items:
+    -   label: MBx_Slave_TCP_Init
+        file: apidoc/apislave/MBx_Slave_TCP_Init.md
+-   label: 主机常用API
+    items:
+    -   label: MBx_Master_RTU_Init
+        file: apidoc/apimaster/MBx_Master_RTU_Init.md
+    -   label: MBx_Master_Member_Add
+        file: apidoc/apimaster/MBx_Master_Member_Add.md
+    -   label: MBx_Master_Error_Get
+        file: apidoc/apimaster/MBx_Master_Error_Get.md
+    -   label: 对从机发起请求 系列API
+        file: apidoc/apimaster/Master2Slave.md
+-   label: 实用功能
+    items:
+    -   label: 用户配置文件
+        file: apidoc/tools/用户配置文件.md

@@ -1,26 +1,28 @@
 {
     "locale": "en",
+    "class": "md_page",
     "navbar": {
-        "title": "my_site",
+        "title": " wiki",
         "logo": {
-            "alt": "my_site logo",
-            "src": "/static/image/logo.png"
+            "alt": "yono loge",
+            "src": "/static/logo/yono_light.svg"
         },
         "home_url": "/en/",
         "items": [
             {
-                "url": "/get_started/en/",
-                "label": "Install",
-                "position": "left"
-            },            {
-                "url": "/blog/",
-                "label": "Blog",
-                "position": "left"
+                "label": "API Doc",
+                "position": "left",
+                "type": "list",
+                "items": [
+                    {
+                        "url": "/modbusX/en/",
+                        "label": "modbusX"
+                    }
+                ]
             },
             {
-                "url": "https://github.com/neutree/teedoc",
-                "label": "github",
-                "target": "_blank",
+                "url": "https://www.yono233.cn",
+                "label": "Blog",
                 "position": "right"
             },
             {
@@ -31,8 +33,8 @@
             }
         ]
     },
-    "footer":{
-        "top":[
+    "footer": {
+        "top": [
             {
                 "label": "Links",
                 "items": [
@@ -52,12 +54,12 @@
                 "items": [
                     {
                         "label": "github",
-                        "url": "https://github.com/neutree/teedoc",
+                        "url": "https://github.com/stbanana",
                         "target": "_blank"
                     },
                     {
                         "label": "website source files",
-                        "url": "https://github.com/teedoc/teedoc.github.io",
+                        "url": "https://github.com/stbanana/doc-wiki",
                         "target": "_blank"
                     }
                 ]
@@ -65,13 +67,8 @@
         ],
         "bottom": [
             {
-                "label": "*ICP备********号",
+                "label": "",
                 "url": "https://beian.miit.gov.cn",
-                "target": "_blank"
-            },
-            {
-                "label": "*公网安备***********号",
-                "url": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=****************",
                 "target": "_blank"
             }
         ]

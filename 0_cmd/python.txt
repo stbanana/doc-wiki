@@ -1,0 +1,9 @@
+# 创建虚拟环境
+python -m venv venvname
+
+# 安装包
+pip3 install teedoc
+
+# 更新包
+pip3 install teedoc --upgrade
+

@@ -1,0 +1,9 @@
+# 安装插件 这会根据site_config.json中的plugins的插件设置安装插件
+teedoc install
+
+# 构建并启用测试服务器
+teedoc serve
+
+# 单构建
+teedoc build
+

@@ -1,0 +1,29 @@
+items:
+-   label: spec
+    file: README.md
+-   label: Library Features
+    file: overview/特性.md
+-   label: Commonly Used APIs
+    items:
+    -   label: MBx_Ticks
+        file: apidoc/apigengric/MBx_Ticks.md
+-   label: Slave Used APIs
+    items:
+    -   label: MBx_Slave_RTU_Init
+        file: apidoc/apislave/MBx_Slave_RTU_Init.md
+    -   label: MBx_Slave_TCP_Init
+        file: apidoc/apislave/MBx_Slave_TCP_Init.md
+-   label: Master Used APIs
+    items:
+    -   label: MBx_Master_RTU_Init
+        file: apidoc/apimaster/MBx_Master_RTU_Init.md
+    -   label: MBx_Master_Member_Add
+        file: apidoc/apimaster/MBx_Master_Member_Add.md
+    -   label: MBx_Master_Error_Get
+        file: apidoc/apimaster/MBx_Master_Error_Get.md
+    -   label: Initiating requests to slave
+        file: apidoc/apimaster/Master2Slave.md
+-   label: utility
+    items:
+    -   label: User Configuration
+        file: apidoc/tools/用户配置文件.md
