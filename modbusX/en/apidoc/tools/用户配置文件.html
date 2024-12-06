@@ -109,12 +109,12 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apigengric/MBx_Ticks.html"><span class="label">MBx_Ticks</span><span class=""></span></a></li>
 </ul>
 </li>
-<li class="not_active no_link"><a><span class="label">Slave uuAPIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">Slave APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apislave/MBx_Slave_RTU_Init.html"><span class="label">MBx_Slave_RTU_Init</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apislave/MBx_Slave_TCP_Init.html"><span class="label">MBx_Slave_TCP_Init</span><span class=""></span></a></li>
 </ul>
 </li>
-<li class="not_active no_link"><a><span class="label">Master uuAPIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">Master APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_RTU_Init.html"><span class="label">MBx_Master_RTU_Init</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Member_Add.html"><span class="label">MBx_Master_Member_Add</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Error_Get.html"><span class="label">MBx_Master_Error_Get</span><span class=""></span></a></li>
@@ -176,6 +176,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     <div id="article_content">
                         
                             <h1 id="%3Cstrong%3EUser-Configuration-File%3C/strong%3E"><strong>User Configuration File</strong></h1>
+<h2 id="Key-point">Key point</h2>
 <p>The customization and configuration of the protocol stack should be an easy task to control the resource usage of the software package.</p>
 <p>In the <code>common/include</code> directory, there is a file named <code>MBx_user_sample.h</code>. Copy this file and rename it to <code>MBx_user.h</code>, and add it to a path that can be included.</p>
 <p>In the global compilation <code>define</code>, add <strong>MBX_INCLUDE_USER_DEFINE_FILE</strong>. This way, the library will use the custom definitions from <code>MBx_user.h</code> instead of the defaults.</p>
@@ -183,6 +184,72 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <p>Once installed, open the <code>MBx_user.h</code> file and click the &quot;Open Preview&quot; icon in the upper right corner to render the configuration file for graphical configuration.</p>
 <p><img src="https://cloudflare-imgbed-6qt.pages.dev/file/1733310833976_%E9%85%8D%E7%BD%AE%E6%B8%B2%E6%9F%93%E5%85%A5%E5%8F%A3%E5%9B%BE%E6%A0%87.png" alt="" /></p>
 <p><img src="https://cloudflare-imgbed-6qt.pages.dev/file/1733310836815_%E9%85%8D%E7%BD%AE%E6%B8%B2%E6%9F%93.png" alt="" /></p>
+<h2 id="Particulars">Particulars</h2>
+<h3 id="MBX_MODULE_TCP_MASTER_ENABLE">MBX_MODULE_TCP_MASTER_ENABLE</h3>
+<p>Default 1</p>
+<p>If you need to use the Modbus TCP master functionality, this macro should be set to 1. Otherwise, it is recommended to set it to 0, which will significantly reduce resource usage (mainly RAM).</p>
+<h3 id="MBX_EXTEN_REG_HANDLE_ENABLE">MBX_EXTEN_REG_HANDLE_ENABLE</h3>
+<p>Default 0</p>
+<p>Note that in the examples provided within the library, all different mapped variables require independent and as unique as possible handling functions.</p>
+<p>If you need to handle requests from different Modbus virtual addresses in a single handling function, this macro should be set to 1. When this macro is set to 1, the mapping table entries need to be modified (each entry will have an additional parameter set), and each write callback should be rewritten in a new way, which will be detailed later.</p>
+<p>A clear applicable scenario is when acting as a Modbus slave, but this slave is merely middleware that needs to control multiple identical module instances. Enabling this macro will greatly reduce the workload and lower maintenance difficulty. There are practical cases for such application scenarios.</p>
+<p><strong>The original mapping table</strong> is as follows, where these three addresses control three identical modules:</p>
+
+<pre class="language-c"><code class="language-c">{.Addr = 0x2001, .Memory = &amp;(Powerflag[0]), .Type = MBX_REG_TYPE_U8,    .Handle = ModbusModulePower1,},
+{.Addr = 0x2011, .Memory = &amp;(Powerflag[1]), .Type = MBX_REG_TYPE_U8,    .Handle = ModbusModulePower2,}, 
+{.Addr = 0x2021, .Memory = &amp;(Powerflag[2]), .Type = MBX_REG_TYPE_U8,    .Handle = ModbusModulePower3,}, 
+</code></pre>
+<p>You would need to write three almost identical callbacks, similar to the following. Although macros can be used to generate functions and other means, it is still difficult to maintain uniformly.</p>
+
+<pre class="language-c"><code class="language-c">uint32_t ModbusModulePower1(void *value)
+{
+    uint8_t ValueGet = (*(uint8_t *)value);
+
+    if(ValueGet &gt; 0)
+    {
+        /* Ignore some startup operations */
+        Powerflag[0] = 1;
+    }
+    else
+    {
+        /* Ignore some shutdown operations */
+        Powerflag[0] = 1;
+    }
+
+    return MBX_API_RETURN_DEFAULT;
+}
+</code></pre>
+<p>After enabling this macro, you need to <strong>update this part of the mapping table</strong> as follows:</p>
+
+<pre class="language-c"><code class="language-c">const _MBX_REG_HANDLE_PARA       MBXPara1 = {.Para1 = 1, .Para2 = 1};
+const _MBX_REG_HANDLE_PARA       MBXPara2 = {.Para1 = 2, .Para2 = 2};
+const _MBX_REG_HANDLE_PARA       MBXPara3 = {.Para1 = 3, .Para2 = 3};
+......
+{.Addr = 0x2001, .Memory = &amp;(Powerflag[0]), .Type = MBX_REG_TYPE_U8, .Handle = ModbusModulePower, .Para = &amp;MBXPara1},
+{.Addr = 0x2011, .Memory = &amp;(Powerflag[1]), .Type = MBX_REG_TYPE_U8, .Handle = ModbusModulePower, .Para = &amp;MBXPara2}, 
+{.Addr = 0x2021, .Memory = &amp;(Powerflag[2]), .Type = MBX_REG_TYPE_U8, .Handle = ModbusModulePower, .Para = &amp;MBXPara3}, 
+</code></pre>
+<p>Here, three global static variables are added as parameter sets, and each mapping entry needs to include the binding of the <code>.Para</code> part. This parameter set will be passed to the write handling function, allowing three identical modules to call the same function without needing to define three almost identical handling functions. Therefore, the definition of the handling function needs to be updated as follows:</p>
+
+<pre class="language-c"><code class="language-c">uint32_t ModbusModulePower(void *value, _MBX_REG_HANDLE_PARA *para)
+{
+    uint8_t ValueGet = (*(uint8_t *)value);
+
+    if(ValueGet &gt; 0)
+    {
+        /* Perform startup operation for module identified by para-&gt;Para1 */
+        Powerflag[para-&gt;Para1 - 1] = 1;
+    }
+    else
+    {
+        /* Perform shutdown operation for module identified by para-&gt;Para1 */
+        Powerflag[para-&gt;Para1 - 1] = 1;
+    }
+
+    return MBX_API_RETURN_DEFAULT;
+}
+</code></pre>
+<p>For entries that do not use this parameter, the best approach is to set <code>.Para = &amp;DefaultPara</code>, where <code>DefaultPara</code> is a static variable generated when the macro is enabled, to avoid wild pointers.</p>
 
                         
                     </div>

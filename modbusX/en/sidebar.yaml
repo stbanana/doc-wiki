@@ -7,13 +7,13 @@ items:
     items:
     -   label: MBx_Ticks
         file: apidoc/apigengric/MBx_Ticks.md
--   label: Slave uuAPIs
+-   label: Slave APIs
     items:
     -   label: MBx_Slave_RTU_Init
         file: apidoc/apislave/MBx_Slave_RTU_Init.md
     -   label: MBx_Slave_TCP_Init
         file: apidoc/apislave/MBx_Slave_TCP_Init.md
--   label: Master uuAPIs
+-   label: Master APIs
     items:
     -   label: MBx_Master_RTU_Init
         file: apidoc/apimaster/MBx_Master_RTU_Init.md
