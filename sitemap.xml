@@ -2,139 +2,139 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/SUMMARY.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/overview/特性.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/apislave/MBx_Slave_TCP_Init.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/apislave/MBx_Slave_RTU_Init.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/tools/用户配置文件.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/apigengric/MBx_Ticks.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/index.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/apimaster/MBx_Master_RTU_Init.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/apimaster/Master2Slave.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/apimaster/MBx_Master_Member_Add.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/zh_hans/apidoc/apimaster/MBx_Master_Error_Get.html</loc>
-            <lastmod>2024-12-05</lastmod>
-            <changefreq>weekly</changefreq>
-            <priority>1.0</priority>
-        </url>
-        <url>
-            <loc>https://wiki.yono233.cn/modbusX/en/SUMMARY.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/overview/特性.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/apislave/MBx_Slave_TCP_Init.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/apislave/MBx_Slave_RTU_Init.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/tools/用户配置文件.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/apigengric/MBx_Ticks.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/index.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+        </url>
+        <url>
+            <loc>https://wiki.yono233.cn/modbusX/en/SUMMARY.html</loc>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/apimaster/MBx_Master_RTU_Init.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/apimaster/Master2Slave.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/apimaster/MBx_Master_Member_Add.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/apidoc/apimaster/MBx_Master_Error_Get.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
             <loc>https://wiki.yono233.cn/modbusX/en/no_translate.html</loc>
-            <lastmod>2024-12-05</lastmod>
+            <lastmod>2024-12-06</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
