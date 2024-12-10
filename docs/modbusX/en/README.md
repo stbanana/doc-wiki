@@ -1,3 +1,12 @@
+---
+update:
+  - date: 2024-12-07
+    author: yono
+    version: 0.3.0
+    content: gitbook 2 teedoc
+update_open: false
+---
+
 # spec
 
 The document formatting  [Chinese Copywriting Guidelines (github.com)](https://github.com/sparanoid/chinese-copywriting-guidelines).

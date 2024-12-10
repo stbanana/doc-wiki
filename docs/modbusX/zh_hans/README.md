@@ -1,3 +1,12 @@
+---
+update:
+  - date: 2024-12-07
+    author: yono
+    version: 0.3.0
+    content: 完成 gitbook 到 teedoc 的迁移
+update_open: false
+---
+
 # 规范
 
 文档排版符合 [中文文案排版指北 (github.com)](https://github.com/sparanoid/chinese-copywriting-guidelines)

@@ -7,6 +7,8 @@ items:
     items:
     -   label: MBx_Ticks
         file: apidoc/apigengric/MBx_Ticks.md
+    -   label: Address Tables
+        file: apidoc/apigengric/Addr_Map.md
 -   label: Slave APIs
     items:
     -   label: MBx_Slave_RTU_Init
@@ -17,6 +19,8 @@ items:
     items:
     -   label: MBx_Master_RTU_Init
         file: apidoc/apimaster/MBx_Master_RTU_Init.md
+    -   label: MBx_Master_TCP_Init
+        file: apidoc/apimaster/MBx_Master_TCP_Init.md
     -   label: MBx_Master_Member_Add
         file: apidoc/apimaster/MBx_Master_Member_Add.md
     -   label: MBx_Master_Error_Get
