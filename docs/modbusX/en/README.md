@@ -4,7 +4,7 @@ update:
     author: yono
     version: 0.3.0
     content: gitbook 2 teedoc
-update_open: false
+update_open: true
 ---
 
 # spec

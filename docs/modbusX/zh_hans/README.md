@@ -4,7 +4,7 @@ update:
     author: yono
     version: 0.3.0
     content: 完成 gitbook 到 teedoc 的迁移
-update_open: false
+update_open: true
 ---
 
 # 规范
