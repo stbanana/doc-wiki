@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"  class=" md_page ">
+<html lang="en"  class=" md_page  heading_no_counter ">
 
 
 <head>
@@ -46,10 +46,10 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
         
     
     
-    <title>Table of contents - 土星环的图书馆</title>
+    <title>土星环的图书馆</title>
     
     <script type="text/javascript">js_vars = {}</script>
-    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "class": "heading_no_counter", "draft": false}</script>
 </head>
 
 
@@ -79,8 +79,8 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
             <div>
                 <ul id="nav_right">
 <li class=""><a  href="https://www.yono233.cn">Blog</a></li>
-<li class="sub_items "><a  >Language: English</a><ul><li class="active"><a  href="/modbusX/en/SUMMARY.html">English</a></li>
-<li class=""><a  href="/modbusX/zh_hans/SUMMARY.html">中文 简体</a></li>
+<li class="sub_items "><a  >Language: English</a><ul><li class="active"><a  href="/modbusX/en/apidoc/apimaster/MBx_Master_TCP_Init.html">English</a></li>
+<li class=""><a  href="/modbusX/zh_hans/apidoc/apimaster/MBx_Master_TCP_Init.html">中文 简体</a></li>
 </ul></li>
 </ul>
 
@@ -102,7 +102,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 <div id="sidebar_title">
                     
                 </div>
-                <ul class="">
+                <ul class="show">
 <li class="not_active with_link"><a href="/modbusX/en/index.html"><span class="label">spec</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/modbusX/en/overview/特性.html"><span class="label">Library Features</span><span class=""></span></a></li>
 <li class="not_active no_link"><a><span class="label">Commonly APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
@@ -115,9 +115,9 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apislave/MBx_Slave_TCP_Init.html"><span class="label">MBx_Slave_TCP_Init</span><span class=""></span></a></li>
 </ul>
 </li>
-<li class="not_active no_link"><a><span class="label">Master APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="active_parent no_link"><a><span class="label">Master APIs</span><span class="sub_indicator"></span></a><ul class="show">
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_RTU_Init.html"><span class="label">MBx_Master_RTU_Init</span><span class=""></span></a></li>
-<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_TCP_Init.html"><span class="label">MBx_Master_TCP_Init</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_TCP_Init.html"><span class="label">MBx_Master_TCP_Init</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Member_Add.html"><span class="label">MBx_Master_Member_Add</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Error_Get.html"><span class="label">MBx_Master_Error_Get</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/Master2Slave.html"><span class="label">Initiating requests to slave</span><span class=""></span></a></li>
@@ -142,7 +142,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     <div id="article_head">
                         <div id="article_title">
                             
-                            <h1>Table of contents</h1>
+                            <h1></h1>
                             
                         </div>
                         <div id="article_tags">
@@ -156,15 +156,11 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                                 
                             </span>
                             
-                                <span class="article_date" title="Last modify date: 2024-12-10">
-                                    2024-12-10
-                                </span>
-                            
                         </div>
                         <div id="article_info_right">
                             
                             <div id="source_link">
-                                <a href="https://github.com/stbanana/doc-wiki/docs/modbusX/en/SUMMARY.md" target="_blank">
+                                <a href="https://github.com/stbanana/doc-wiki/docs/modbusX/en/apidoc/apimaster/MBx_Master_TCP_Init.md" target="_blank">
                                     Edit this page
                                 </a>
                             </div>
@@ -181,34 +177,39 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     </div>
                     <div id="article_content">
                         
-                            <ul>
-<li><p><a href="overview/%E7%89%B9%E6%80%A7.html"  >Library Features</a></p>
-</li>
-<li><p><a href="top/%E9%80%9A%E7%94%A8%E5%B8%B8%E7%94%A8API.html"  >Commonly Used APIs</a></p>
+                            <h1 id="MBx_Master_TCP_Init">MBx_Master_TCP_Init</h1>
+<h3 id="source">source</h3>
+
+<pre class="language-c"><code class="language-c">uint32_t MBx_Master_RTU_Init(_MBX_MASTER *MBxMaster, 
+                             MBX_SEND_PTR MBxSend,
+                             MBX_GTEC_PTR MBxGetc,
+                             uint32_t     BaudRate,
+                             uint8_t     *RxBuffer,
+                             uint32_t     RxBufferSize,
+                             uint8_t     *TxBuffer,
+                             uint32_t     TxBufferSize
+                             );
+</code></pre>
+<p>Initialize the MBX master object for TCP and pass various configuration parameters to initialize this _MBX_MASTER type master object.</p>
+<h3 id="Parameters">Parameters</h3>
+<blockquote>
 <ul>
-<li><a href="apidoc/apigengric/MBx_Ticks.html"  >MBx_Ticks</a></li>
+<li>MBxMaster: Pointer to the master object to be initialized.</li>
+<li>MBxSend: A function pointer for the data sending port.</li>
+<li>MBxGetc: A function pointer for the data receiving port.</li>
+<li>RxBuffer: Pointer to a memory space for storing received data.</li>
+<li>RxBufferSize: Total length of the memory space for storing received data. This memory space determines the maximum length of a single slave response that can be parsed.</li>
+<li>TxBuffer: Pointer to a memory space for storing data to be sent.</li>
+<li>TxBufferSize: Total length of the memory space for storing data to be sent. This memory space determines the maximum length of a single master request that can be sent.</li>
 </ul>
-</li>
-<li><p><a href="top/%E4%BB%8E%E6%9C%BA%E5%B8%B8%E7%94%A8API.html"  >Slave Used APIs</a></p>
+</blockquote>
+<h3 id="Return-Value">Return Value</h3>
+<blockquote>
 <ul>
-<li><a href="apidoc/apislave/MBx_Slave_RTU_Init.html"  >MBx_Slave_RTU_Init</a></li>
-<li><a href="apidoc/apislave/MBx_Slave_TCP_Init.html"  >MBx_Slave_TCP_Init</a></li>
+<li>MBX_API_RETURN_DEFAULT(0x00): Normal return.</li>
+<li>MBX_API_RETURN_ERR_PARAM(0x02): Parameter error, check the parameters passed during the call.</li>
 </ul>
-</li>
-<li><p><a href="top/%E4%B8%BB%E6%9C%BA%E5%B8%B8%E7%94%A8API.html"  >Master Used APIs</a></p>
-<ul>
-<li><a href="apidoc/apimaster/MBx_Master_RTU_Init.html"  >MBx_Master_RTU_Init</a></li>
-<li><a href="apidoc/apimaster/MBx_Master_Member_Add.html"  >MBx_Master_Member_Add</a></li>
-<li><a href="apidoc/apimaster/MBx_Master_Error_Get.html"  >MBx_Master_Error_Get</a></li>
-<li><a href="apidoc/apimaster/Master2Slave.html"  >API Series for Initiating Requests to Slave</a></li>
-</ul>
-</li>
-<li><p><a href="top/%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD.html"  >utility</a></p>
-<ul>
-<li><a href="apidoc/tools/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html"  >User Configuration File</a></li>
-</ul>
-</li>
-</ul>
+</blockquote>
 
                         
                     </div>
@@ -216,8 +217,18 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 <div id="previous_next">
                     <div id="previous">
                         
+                        <a href="/modbusX/en/apidoc/apimaster/MBx_Master_RTU_Init.html">
+                            <span class="icon"></span>
+                            <span class="label">MBx_Master_RTU_Init</span>
+                        </a>
+                        
                     </div>
                     <div id="next">
+                        
+                        <a href="/modbusX/en/apidoc/apimaster/MBx_Master_Member_Add.html">
+                            <span class="label">MBx_Master_Member_Add</span>
+                            <span class="icon"></span>
+                        </a>
                         
                     </div>
                 </div>
