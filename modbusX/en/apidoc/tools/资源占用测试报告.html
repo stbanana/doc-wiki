@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html lang="en"  class=" md_page  heading_no_counter ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>土星环的图书馆</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "class": "heading_no_counter", "draft": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/logo/yono_light.svg" alt="yono loge">
+                
+                
+                    <h2> wiki</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="sub_items active_parent"><a >API Doc</a><ul><li class="active"><a  href="/modbusX/en/">modbusX</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="https://www.yono233.cn">Blog</a></li>
+<li class="sub_items "><a  >Language: English</a><ul><li class="active"><a  href="/modbusX/en/apidoc/tools/资源占用测试报告.html">English</a></li>
+<li class=""><a  href="/modbusX/zh_hans/apidoc/tools/资源占用测试报告.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/modbusX/en/index.html"><span class="label">spec</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/overview/特性.html"><span class="label">Library Features</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">Commonly APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apigengric/MBx_Ticks.html"><span class="label">MBx_Ticks</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apigengric/Addr_Map.html"><span class="label">Address Tables</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Slave APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apislave/MBx_Slave_RTU_Init.html"><span class="label">MBx_Slave_RTU_Init</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apislave/MBx_Slave_TCP_Init.html"><span class="label">MBx_Slave_TCP_Init</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Master APIs</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_RTU_Init.html"><span class="label">MBx_Master_RTU_Init</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_TCP_Init.html"><span class="label">MBx_Master_TCP_Init</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Member_Add.html"><span class="label">MBx_Master_Member_Add</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/MBx_Master_Error_Get.html"><span class="label">MBx_Master_Error_Get</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/apimaster/Master2Slave.html"><span class="label">Initiating requests to slave</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">Utility</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/tools/用户配置文件.html"><span class="label">User Configuration</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/modbusX/en/apidoc/tools/资源占用测试报告.html"><span class="label">Resource usage test report</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active  with_link"><a href="https://github.com/stbanana/modbusX" ><span class="label">Project</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1></h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                            <div id="source_link">
+                                <a href="https://github.com/stbanana/doc-wiki/docs/modbusX/en/apidoc/tools/资源占用测试报告.md" target="_blank">
+                                    Edit this page
+                                </a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h1 id="%E8%B5%84%E6%BA%90%E5%8D%A0%E7%94%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A">资源占用测试报告</h1>
+<p>综合来看有以下的资源占用报告</p>
+<table>
+<thead>
+<tr>
+  <th>ROM \ RAM (byte)</th>
+  <th>O0</th>
+  <th>O3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>库本体</td>
+  <td>20724 \ 200</td>
+  <td>10360 \ 204</td>
+</tr>
+<tr>
+  <td>1 个从机对象</td>
+  <td>988 \ 80</td>
+  <td>632 \ 80</td>
+</tr>
+<tr>
+  <td>1 个映射条目 (静态)</td>
+  <td>20 \ 0</td>
+  <td>20 \ 0</td>
+</tr>
+<tr>
+  <td>1 个主机对象</td>
+  <td>908 \ 21012</td>
+  <td>548 \ 21016</td>
+</tr>
+<tr>
+  <td>主机成员从机对象，与从机对象类似</td>
+  <td>未测试</td>
+  <td>未测试</td>
+</tr>
+</tbody>
+</table>
+<p>除此以外，为对象准备的收发 buffer 空间也会占用少量 RAM ，编写复杂的回调函数会占用少量 ROM ，但这些可以自定自控制。</p>
+<p>注意到整个库，大部分的内容都使用较少的资源，<strong>只有主机对象占用了大量的 RAM</strong>，这是由于开启了所有占用资源的配置项。</p>
+<p>以下会有一个推荐的裁剪过程。</p>
+<p>默认用户已经熟读了<a href="./%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html"  >用户配置文件</a> 的内容，对于资源受限的芯片，</p>
+<blockquote>
+<p>将 <strong>MBX_MODULE_TCP_MASTER_ENABLE</strong> 置为 0<br />
+将 <strong>MBX_MASTER_REQUEST_QUEUE_MAX</strong> 置为 32<br />
+将 <strong>MBX_MASTER_ERROR_QUEUE_MAX</strong> 置为 1<br />
+将 <strong>MBX_MASTER_MULTI_REG_MAX</strong> 置为 20</p>
+</blockquote>
+<p>会显著降低为这样的资源消耗</p>
+<p>0x2400001c    g       O     .bss                 0x00000638    MBxMaster</p>
+<table>
+<thead>
+<tr>
+  <th>RAM (byte)</th>
+  <th>O0</th>
+  <th>O3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1 个主机对象</td>
+  <td>1592</td>
+  <td>1592</td>
+</tr>
+</tbody>
+</table>
+<p><strong>开启所有占用资源的配置选项</strong>，有如下</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">ROM \ RAM (byte)</th>
+  <th>O0</th>
+  <th>O3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">基准参考1<br />(没有启动文件)</td>
+  <td>96 \ 28</td>
+  <td>96 \ 28</td>
+</tr>
+<tr>
+  <td style="text-align:left">基准参考2<br />(带有启动文件)</td>
+  <td>936 \ 28</td>
+  <td>924 \ 28</td>
+</tr>
+<tr>
+  <td style="text-align:left">库本体<br />(仅调用库tick)</td>
+  <td>21660 \ 228</td>
+  <td>11284 \ 232</td>
+</tr>
+<tr>
+  <td style="text-align:left">库本体 + 1 个从机对象<br />(无映射条目无收发buffer)</td>
+  <td>22648 \ 308</td>
+  <td>11916 \ 308</td>
+</tr>
+<tr>
+  <td style="text-align:left">库本体 + 1 个从机对象 +<br />1 个映射条目 <br />(无收发buffer))</td>
+  <td>22668 \ 308</td>
+  <td>11936 \ 308</td>
+</tr>
+<tr>
+  <td style="text-align:left">库本体 + 1 个从机对象 +<br />1 个映射条目 + 1 个简单回调<br />(无收发buffer))</td>
+  <td>22700 \ 308</td>
+  <td>11940 \ 308</td>
+</tr>
+<tr>
+  <td style="text-align:left">库本体 + 1 个主机对象 <br />(无收发buffer，无从机成员))</td>
+  <td>22568 \ 21240</td>
+  <td>11832 \ 21244</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%9F%BA%E5%87%86%E5%8F%82%E8%80%831">基准参考1</h2>
+<p>只链接了必要库的空项目，没有启动文件，无法链接出实际产物</p>
+<h3 id="O0-%E4%BC%98%E5%8C%96">O0 优化</h3>
+
+<pre class="language-sh"><code class="language-sh">[build] c:/111_apps/msys2/mingw64/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08020000
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:          96 B         2 MB      0.00%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:          28 B       512 KB      0.01%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h3 id="03%E4%BC%98%E5%8C%96">03优化</h3>
+
+<pre class="language-sh"><code class="language-sh">[build] c:/111_apps/msys2/mingw64/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08020000
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:          96 B         2 MB      0.00%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:          28 B       512 KB      0.01%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h2 id="%E5%9F%BA%E5%87%86%E5%8F%82%E8%80%832">基准参考2</h2>
+<p>只链接了必要库的空项目，有启动文件，链接出实际产物</p>
+<h3 id="O0-%E4%BC%98%E5%8C%96">O0 优化</h3>
+
+<pre class="language-sh"><code class="language-sh">[build] [100%] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:         936 B         2 MB      0.04%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:          28 B       512 KB      0.01%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h3 id="03%E4%BC%98%E5%8C%96">03优化</h3>
+
+<pre class="language-sh"><code class="language-sh">[build] [4/4 100% :: 1.100] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:         924 B         2 MB      0.04%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:          28 B       512 KB      0.01%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h2 id="%E5%BA%93%E6%9C%AC%E4%BD%93%E8%B5%84%E6%BA%90%E5%8D%A0%E7%94%A8">库本体资源占用</h2>
+<p>以下代码测试(不展示启动文件)</p>
+
+<pre class="language-c"><code class="language-c">#include &lt;MBx_api.h&gt;
+
+//
+int main( )
+{
+    MBx_Ticks(1);
+    return 0;
+}
+</code></pre>
+<p>ARM-GCC 编译测试，库本体，而没有任何一个主从机对象</p>
+<h3 id="O0-%E4%BC%98%E5%8C%96">O0 优化</h3>
+<p>占用 21468 字节 ROM ，200 字节 RAM</p>
+<p>具备启动文件和main函数，在配置文件开启了完全的功能，如下</p>
+
+<pre class="language-sh"><code class="language-sh">[build] [100%] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       21660 B         2 MB      1.03%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         228 B       512 KB      0.04%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h3 id="03%E4%BC%98%E5%8C%96">03优化</h3>
+<p>占用 11188 字节 ROM ，204 字节 RAM</p>
+<p>具备启动文件和main函数，在配置文件开启了完全的功能，如下</p>
+
+<pre class="language-sh"><code class="language-sh">[build] [100%] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       11284 B         2 MB      0.54%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         232 B       512 KB      0.04%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h2 id="%E4%B8%80%E4%B8%AA%E4%BB%8E%E6%9C%BA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E7%AE%80%E5%8D%95port%EF%BC%8C%E7%A9%BA%E6%98%A0%E5%B0%84%E8%A1%A8">一个从机对象，简单port，空映射表</h2>
+<p>以下代码测试(不展示启动文件)</p>
+
+<pre class="language-c"><code class="language-c">#include &lt;MBx_api.h&gt;
+
+static const _MBX_MAP_LIST_ENTRY MapList[];
+_MBX_SLAVE                       MBxSlave;
+
+//
+uint32_t SendPort(const void *Data, size_t Len)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+uint32_t GetcPort(uint8_t *Data)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+//
+int main( )
+{
+    /* 初始化modbus从机1 */
+    if(MBx_Slave_RTU_Init(&amp;MBxSlave, // 从机对象
+                          1,         // 从机ID
+                          MapList,   // 地址映射表
+                          SendPort,  // 发送函数
+                          GetcPort,  // 接收函数
+                          9600,      // 波特率
+                          NULL,      // 库内接收buffer分配
+                          84,        // 接收buffer最大长度
+                          NULL,      // 库内发送buffer分配
+                          84)        // 发送buffer最大长度
+       != MBX_API_RETURN_DEFAULT)
+    {
+        /* 初始化错误 自行判断返回值差错 */
+    }
+
+    MBx_Ticks(1);
+    return 0;
+}
+
+static const _MBX_MAP_LIST_ENTRY MapList[] = {
+
+    MBX_MAP_LIST_END
+};
+</code></pre>
+<h3 id="O0-%E4%BC%98%E5%8C%96">O0 优化</h3>
+<p>占用 22552 字节 ROM ，280 字节 RAM</p>
+
+<pre class="language-sh"><code class="language-sh">[build] [100%] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       22648 B         2 MB      1.08%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         308 B       512 KB      0.06%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h3 id="O3%E4%BC%98%E5%8C%96">O3优化</h3>
+<p>具备启动文件和main函数，在配置文件开启了完全的功能，如下</p>
+
+<pre class="language-sh"><code class="language-sh">[build] [  4%] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       11916 B         2 MB      0.57%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         308 B       512 KB      0.06%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h2 id="%E4%B8%80%E4%B8%AA%E4%BB%8E%E6%9C%BA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E7%AE%80%E5%8D%95port%EF%BC%8C%E4%B8%80%E4%B8%AA%E6%9D%A1%E7%9B%AE%E6%98%A0%E5%B0%84%E8%A1%A8%EF%BC%8C%E6%97%A0%E5%AE%9E%E9%99%85%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">一个从机对象，简单port，一个条目映射表，无实际回调函数</h2>
+<p>以下测试代码(不展示启动文件)</p>
+
+<pre class="language-c"><code class="language-c">#include &lt;MBx_api.h&gt;
+
+static const _MBX_MAP_LIST_ENTRY MapList[];
+_MBX_SLAVE                       MBxSlave;
+
+//
+uint32_t SendPort(const void *Data, size_t Len)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+uint32_t GetcPort(uint8_t *Data)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+//
+int main( )
+{
+    /* 初始化modbus从机1 */
+    if(MBx_Slave_RTU_Init(&amp;MBxSlave, // 从机对象
+                          1,         // 从机ID
+                          MapList,   // 地址映射表
+                          SendPort,  // 发送函数
+                          GetcPort,  // 接收函数
+                          9600,      // 波特率
+                          NULL,      // 库内接收buffer分配
+                          84,        // 接收buffer最大长度
+                          NULL,      // 库内发送buffer分配
+                          84)        // 发送buffer最大长度
+       != MBX_API_RETURN_DEFAULT)
+    {
+        /* 初始化错误 自行判断返回值差错 */
+    }
+
+    MBx_Ticks(1);
+    return 0;
+}
+
+static const _MBX_MAP_LIST_ENTRY MapList[] = {
+
+    {.Addr = 0x0001, .Memory = &amp;(MBxSlave.Config.MapNum), .Type = MBX_REG_TYPE_U16, .Handle = NULL, .Para = &amp;DefaultPara},
+
+    MBX_MAP_LIST_END
+};
+
+</code></pre>
+<h3 id="O0-%E4%BC%98%E5%8C%96">O0 优化</h3>
+
+<pre class="language-sh"><code class="language-sh">[build] [43/43 100% :: 2.018] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       22668 B         2 MB      1.08%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         308 B       512 KB      0.06%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h3 id="O3%E4%BC%98%E5%8C%96">O3优化</h3>
+<p>具备启动文件和main函数，在配置文件开启了完全的功能，如下</p>
+
+<pre class="language-sh"><code class="language-sh">[build] [2/2 100% :: 1.049] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       11936 B         2 MB      0.57%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         308 B       512 KB      0.06%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h2 id="%E4%B8%80%E4%B8%AA%E4%BB%8E%E6%9C%BA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E7%AE%80%E5%8D%95port%EF%BC%8C%E6%97%A0%E4%BB%8E%E6%9C%BA%E6%88%90%E5%91%98%E5%AF%B9%E8%B1%A1%EF%BC%8C%E6%97%A0%E5%AE%9E%E9%99%85%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">一个从机对象，简单port，无从机成员对象，无实际回调函数</h2>
+<p>以下测试代码(不展示启动文件)</p>
+
+<pre class="language-c"><code class="language-c">#include &lt;MBx_api.h&gt;
+
+static const _MBX_MAP_LIST_ENTRY MapList[];
+_MBX_SLAVE                       MBxSlave;
+
+//
+uint32_t SendPort(const void *Data, size_t Len)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+uint32_t GetcPort(uint8_t *Data)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+uint32_t ModbusSetFoo(void *value, _MBX_REG_HANDLE_PARA *para)
+{
+    int16_t ValueGet = (*(int16_t *)value);
+    return MBX_API_RETURN_DEFAULT;
+}
+
+//
+int main( )
+{
+    /* 初始化modbus从机1 */
+    if(MBx_Slave_RTU_Init(&amp;MBxSlave, // 从机对象
+                          1,         // 从机ID
+                          MapList,   // 地址映射表
+                          SendPort,  // 发送函数
+                          GetcPort,  // 接收函数
+                          9600,      // 波特率
+                          NULL,      // 库内接收buffer分配
+                          84,        // 接收buffer最大长度
+                          NULL,      // 库内发送buffer分配
+                          84)        // 发送buffer最大长度
+       != MBX_API_RETURN_DEFAULT)
+    {
+        /* 初始化错误 自行判断返回值差错 */
+    }
+
+    MBx_Ticks(1);
+    return 0;
+}
+
+static const _MBX_MAP_LIST_ENTRY MapList[] = {
+
+    {.Addr = 0x0001, .Memory = &amp;(MBxSlave.Config.MapNum), .Type = MBX_REG_TYPE_U16, .Handle = ModbusSetFoo, .Para = &amp;DefaultPara},
+
+    MBX_MAP_LIST_END
+};
+</code></pre>
+<h3 id="O0-%E4%BC%98%E5%8C%96">O0 优化</h3>
+
+<pre class="language-sh"><code class="language-sh">[build] [2/2 100% :: 1.197] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       22700 B         2 MB      1.08%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         308 B       512 KB      0.06%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h3 id="O3%E4%BC%98%E5%8C%96">O3优化</h3>
+<p>具备启动文件和main函数，在配置文件开启了完全的功能，如下</p>
+
+<pre class="language-sh"><code class="language-sh">[build] [43/43 100% :: 2.079] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       11940 B         2 MB      0.57%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:         308 B       512 KB      0.06%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h2 id="%E4%B8%80%E4%B8%AA%E4%B8%BB%E6%9C%BA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E7%AE%80%E5%8D%95port%EF%BC%8C%E4%B8%80%E4%B8%AA%E6%9D%A1%E7%9B%AE%E6%98%A0%E5%B0%84%E8%A1%A8%EF%BC%8C%E4%B8%80%E4%B8%AA%E5%AE%9E%E9%99%85%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">一个主机对象，简单port，一个条目映射表，一个实际回调函数</h2>
+<p>以下测试代码(不展示启动文件)</p>
+
+<pre class="language-c"><code class="language-c">#include &lt;MBx_api.h&gt;
+
+_MBX_MASTER MBxMaster;
+
+//
+uint32_t SendPort(const void *Data, size_t Len)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+uint32_t GetcPort(uint8_t *Data)
+{
+    return MBX_PORT_RETURN_DEFAULT;
+}
+
+int main( )
+{
+    /* 初始化modbus主机1 */
+    if(MBx_Master_RTU_Init(&amp;MBxMaster, // 主机对象
+                           SendPort,   // 发送函数
+                           GetcPort,   // 接收函数
+                           9600,       // 波特率
+                           NULL,       // 库内接收buffer分配
+                           84,         // 接收buffer最大长度
+                           NULL,       // 库内发送buffer分配
+                           84)         // 发送buffer最大长度
+       != MBX_API_RETURN_DEFAULT)
+    {
+        /* 初始化错误 自行判断返回值差错 */
+    }
+
+    MBx_Ticks(1);
+    return 0;
+}
+</code></pre>
+<h3 id="O0-%E4%BC%98%E5%8C%96">O0 优化</h3>
+
+<pre class="language-sh"><code class="language-sh">[build] [43/43 100% :: 2.056] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       22568 B         2 MB      1.08%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:       21240 B       512 KB      4.05%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+<h3 id="O3%E4%BC%98%E5%8C%96">O3优化</h3>
+<p>具备启动文件和main函数，在配置文件开启了完全的功能，如下</p>
+
+<pre class="language-sh"><code class="language-sh">[build] [43/43 100% :: 2.164] Linking C executable arm-size-test.elf
+[build] Memory region         Used Size  Region Size  %age Used
+[build]            FLASH:       11832 B         2 MB      0.56%
+[build]       RAM_BLFlag:          0 GB          4 B      0.00%
+[build]          DTCMRAM:        1540 B     131068 B      1.17%
+[build]           RAM_D1:       21244 B       512 KB      4.05%
+[build]           RAM_D2:          0 GB       288 KB      0.00%
+[build]           RAM_D3:          0 GB        64 KB      0.00%
+</code></pre>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/modbusX/en/apidoc/tools/用户配置文件.html">
+                            <span class="icon"></span>
+                            <span class="label">User Configuration</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://teedoc.neucrack.com">Build with teedoc</a></li>
+<li><a  href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</li>
+<li><a>Source code</a><ul><li><a target="_blank" href="https://github.com/stbanana">github</a></li>
+<li><a target="_blank" href="https://github.com/stbanana/doc-wiki">website source files</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://beian.miit.gov.cn"></a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

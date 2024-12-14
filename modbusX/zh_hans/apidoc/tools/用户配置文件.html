@@ -125,6 +125,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 </li>
 <li class="active_parent no_link"><a><span class="label">实用功能</span><span class="sub_indicator"></span></a><ul class="show">
 <li class="active with_link"><a href="/modbusX/zh_hans/apidoc/tools/用户配置文件.html"><span class="label">用户配置文件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/zh_hans/apidoc/tools/资源占用测试报告.html"><span class="label">资源占用测试报告</span><span class=""></span></a></li>
 </ul>
 </li>
 <li class="not_active  with_link"><a href="https://github.com/stbanana/modbusX" ><span class="label">项目源码</span><span class=""></span></a></li>
@@ -181,9 +182,21 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <p><img src="https://cloudflare-imgbed-6qt.pages.dev/file/1733310833976_%E9%85%8D%E7%BD%AE%E6%B8%B2%E6%9F%93%E5%85%A5%E5%8F%A3%E5%9B%BE%E6%A0%87.png" alt="" /></p>
 <p><img src="https://cloudflare-imgbed-6qt.pages.dev/file/1733310836815_%E9%85%8D%E7%BD%AE%E6%B8%B2%E6%9F%93.png" alt="" /></p>
 <h2 id="%E9%85%8D%E7%BD%AE%E7%BB%86%E5%88%99">配置细则</h2>
+<h3 id="MBX_SLAVE_ENABLE">MBX_SLAVE_ENABLE</h3>
+<p>默认 1</p>
+<p>从机功能是否开启 1则开启 0则裁剪去掉从机功能</p>
+<h3 id="MBX_MASTER_ENABLE">MBX_MASTER_ENABLE</h3>
+<p>默认 1</p>
+<p>主机功能是否开启 1则开启 0则裁剪去掉主机功能</p>
 <h3 id="MBX_MODULE_TCP_MASTER_ENABLE">MBX_MODULE_TCP_MASTER_ENABLE</h3>
 <p>默认 1</p>
 <p>如果使用 modbus TCP 的主机功能需要将这个宏置为 1，否则推荐是置 0，会明显减少资源的占用(主要是 RAM)。</p>
+<h3 id="MBX_MASTER_REQUEST_QUEUE_MAX">MBX_MASTER_REQUEST_QUEUE_MAX</h3>
+<p>默认 40</p>
+<p>主机请求队列的最大寄存条数，用于连续读写请求，寄存并自动发送处理。此条会显著影响 RAM 占用。</p>
+<h3 id="MBX_MASTER_MULTI_REG_MAX">MBX_MASTER_MULTI_REG_MAX</h3>
+<p>默认 127</p>
+<p>主机读写多个寄存器的最大个数，用于设定库发出的连续读或连续写指令，最多可指定多少个寄存器，此条会显著影响 RAM 占用。</p>
 <h3 id="MBX_EXTEN_REG_HANDLE_ENABLE">MBX_EXTEN_REG_HANDLE_ENABLE</h3>
 <p>默认 0</p>
 <p>注意到在库内给出的例程，所有不同的映射变量，需要独立且尽可能唯一的处理函数。</p>
@@ -260,6 +273,11 @@ const _MBX_REG_HANDLE_PARA       MBXPara3 = {.Para1 = 3, .Para2 = 3};
                         
                     </div>
                     <div id="next">
+                        
+                        <a href="/modbusX/zh_hans/apidoc/tools/资源占用测试报告.html">
+                            <span class="label">资源占用测试报告</span>
+                            <span class="icon"></span>
+                        </a>
                         
                     </div>
                 </div>

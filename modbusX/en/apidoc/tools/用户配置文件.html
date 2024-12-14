@@ -125,6 +125,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 </li>
 <li class="active_parent no_link"><a><span class="label">Utility</span><span class="sub_indicator"></span></a><ul class="show">
 <li class="active with_link"><a href="/modbusX/en/apidoc/tools/用户配置文件.html"><span class="label">User Configuration</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/modbusX/en/apidoc/tools/资源占用测试报告.html"><span class="label">Resource usage test report</span><span class=""></span></a></li>
 </ul>
 </li>
 <li class="not_active  with_link"><a href="https://github.com/stbanana/modbusX" ><span class="label">Project</span><span class=""></span></a></li>
@@ -187,9 +188,21 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <p><img src="https://cloudflare-imgbed-6qt.pages.dev/file/1733310833976_%E9%85%8D%E7%BD%AE%E6%B8%B2%E6%9F%93%E5%85%A5%E5%8F%A3%E5%9B%BE%E6%A0%87.png" alt="" /></p>
 <p><img src="https://cloudflare-imgbed-6qt.pages.dev/file/1733310836815_%E9%85%8D%E7%BD%AE%E6%B8%B2%E6%9F%93.png" alt="" /></p>
 <h2 id="Particulars">Particulars</h2>
+<h3 id="MBX_SLAVE_ENABLE">MBX_SLAVE_ENABLE</h3>
+<p>Default 1</p>
+<p>Whether the slave function is open, 1 is open, 0 is cut off the slave function</p>
+<h3 id="MBX_MASTER_ENABLE">MBX_MASTER_ENABLE</h3>
+<p>默认 1</p>
+<p>Whether the master function is open, 1 is open, 0 is cut off the master function</p>
 <h3 id="MBX_MODULE_TCP_MASTER_ENABLE">MBX_MODULE_TCP_MASTER_ENABLE</h3>
 <p>Default 1</p>
 <p>If you need to use the Modbus TCP master functionality, this macro should be set to 1. Otherwise, it is recommended to set it to 0, which will significantly reduce resource usage (mainly RAM).</p>
+<h3 id="MBX_MASTER_REQUEST_QUEUE_MAX">MBX_MASTER_REQUEST_QUEUE_MAX</h3>
+<p>Default 40</p>
+<p>The maximum number of entries in the host request queue for continuous read and write requests, stored and automatically sent for processing. This can significantly affect RAM usage.</p>
+<h3 id="MBX_MASTER_MULTI_REG_MAX">MBX_MASTER_MULTI_REG_MAX</h3>
+<p>Default 127</p>
+<p>The maximum number of multiple registers that the host can read and write to sets the maximum number of registers that can be specified for successive read or write instructions issued by the library, which significantly affects RAM usage.</p>
 <h3 id="MBX_EXTEN_REG_HANDLE_ENABLE">MBX_EXTEN_REG_HANDLE_ENABLE</h3>
 <p>Default 0</p>
 <p>Note that in the examples provided within the library, all different mapped variables require independent and as unique as possible handling functions.</p>
@@ -266,6 +279,11 @@ const _MBX_REG_HANDLE_PARA       MBXPara3 = {.Para1 = 3, .Para2 = 3};
                         
                     </div>
                     <div id="next">
+                        
+                        <a href="/modbusX/en/apidoc/tools/资源占用测试报告.html">
+                            <span class="label">Resource usage test report</span>
+                            <span class="icon"></span>
+                        </a>
                         
                     </div>
                 </div>

@@ -31,5 +31,7 @@ items:
     items:
     -   label: 用户配置文件
         file: apidoc/tools/用户配置文件.md
+    -   label: 资源占用测试报告
+        file: apidoc/tools/资源占用测试报告.md
 -   label: 项目源码
     url: https://github.com/stbanana/modbusX
