@@ -74,7 +74,7 @@
                     "/static/js/custom.js"
                 ],
                 "env": {
-                    "main_color": "#4caf7d",
+                    "main_color": "#F6A1B5",
                     "second_color": "#0a7d43"
                 }
             }
