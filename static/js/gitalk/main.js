@@ -7,7 +7,7 @@
     return;
   }
   // render
-  var config = {"clientID": "Ov23liGtbvMkazf7KAup", "clientSecret": "2390f74ab3fc60b1f1eaf9db07764ab3f8ccdb8f", "repo": "doc-wiki", "owner": "stbanana", "admin": ["stbanana"], "adminAutoCreate": false};
+  var config = {"clientID": "Ov23liGtbvMkazf7KAup", "clientSecret": "2390f74ab3fc60b1f1eaf9db07764ab3f8ccdb8f", "repo": "doc-wiki", "owner": "stbanana", "admin": ["stbanana"], "adminAutoCreate": false, "proxy": "https://strong-caramel-969805.netlify.app/github_access_token"};
   var html = document.getElementsByTagName("html")[0];
   var id = html.id;
   if(id){
