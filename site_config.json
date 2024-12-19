@@ -78,6 +78,23 @@
                     "second_color": "#0a7d43"
                 }
             }
+        },
+        "teedoc-plugin-comments-gitalk": {
+            "from": "pypi",
+            "config": {
+                "env": {
+                    "clientID": "Ov23liGtbvMkazf7KAup",
+                    "clientSecret": "2390f74ab3fc60b1f1eaf9db07764ab3f8ccdb8f",
+                    "repo": "doc-wiki",
+                    "owner": "stbanana",
+                    "admin": [
+                        "stbanana"
+                    ],
+                    "main_color": "#4caf7d",
+                    "second_color": "#0a7d43",
+                    "adminAutoCreate": false
+                }
+            }
         }
     },
     "rebuild_changes_delay": 1,
