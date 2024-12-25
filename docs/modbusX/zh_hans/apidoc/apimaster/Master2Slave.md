@@ -5,8 +5,6 @@ draft: false
 
 # 对从机发起请求 系列API
 
-
-
 ## **MBx_Master_Read_Coil_Request**
 
 ```c

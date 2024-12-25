@@ -17,6 +17,10 @@
                     {
                         "url": "/modbusX/zh_hans/",
                         "label": "modbusX"
+                    },
+                    {
+                        "url": "/Dataflow/zh_hans/",
+                        "label": "Dataflow"
                     }
                 ]
             },

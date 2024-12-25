@@ -8,7 +8,8 @@
     "source": "https://github.com/stbanana/doc-wiki",
     "route": {
         "docs": {
-            "/modbusX/zh_hans/": "docs/modbusX/zh_hans"
+            "/modbusX/zh_hans/": "docs/modbusX/zh_hans",
+            "/Dataflow/zh_hans/": "docs/Dataflow/zh_hans"
         },
         "pages": {
             "/": "pages/index/zh"
@@ -24,6 +25,12 @@
                 {
                     "url": "/modbusX/en/",
                     "src": "docs/modbusX/en"
+                }
+            ],
+            "/Dataflow/zh_hans/": [
+                {
+                    "url": "/Dataflow/en/",
+                    "src": "docs/Dataflow/en"
                 }
             ]
         },
