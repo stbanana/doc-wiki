@@ -2,10 +2,10 @@
     "locale": "zh_CN",
     "class": "md_page",
     "navbar": {
-        "title": " wiki",
+        "title": "",
         "logo": {
             "alt": "yono loge",
-            "src": "/static/logo/yono_light.svg"
+            "src": "/static/logo/yono_wiki.svg"
         },
         "home_url": "/",
         "items": [
