@@ -13,9 +13,9 @@ id: home_page
 
 <div id="fullpage">
     <div class="section" style="height: 70vh;">
-        <div>
+        <!-- <div>
             <h1><span>wiki</span></h1>
-        </div>
+        </div> -->
         <div>
             <a>yeah~ we got it !</a>
         </div>

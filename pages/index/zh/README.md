@@ -13,9 +13,9 @@ id: home_page
 
 <div id="fullpage">
     <div class="section" style="height: 70vh;">
-        <div>
+        <!-- <div>
             <h1><span>wiki</span></h1>
-        </div>
+        </div> -->
         <div>
             <a>好耶~ 我们找到了！</a>
         </div>
