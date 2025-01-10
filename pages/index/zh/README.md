@@ -6,24 +6,29 @@ id: home_page
 ---
 
 <div>
-    <!-- <script src="/static/js/scrolloverflow.min.js"></script> -->
-    <script src="/static/js/jquery.fullpage.min.js"></script>
-    <link rel="stylesheet" href="/static/css/jquery.fullpage.min.css" type="text/css" />
+    <script src="/static/js/custom.js"></script>
+    <link rel="stylesheet" href="/static/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="/static/layui/css/layui.css" type="text/css" />
 </div>
+
 
 <div id="fullpage">
     <div class="section" style="height: 70vh;">
-        <!-- <div>
-            <h1><span>wiki</span></h1>
-        </div> -->
-        <div>
-            <a>好耶~ 我们找到了！</a>
-        </div>
-        <!-- <div class="big_btn_wrapper">
-            <div class="big_btn">
-                <a href="/modbusX/zh_hans/">modbusX</a>
+        <body class="layui-margin-5">
+            <div class="layui-fluid">
+                <div class="layui-panel" style="height: 50vh;">
+                    <div class="layui-text" style="text-align: right;">
+                        <h1>wiki</h1>
+                        <em> 好耶~ 我们找到了！ </em>
+                    </div>
+                    <hr>
+                    <div class="layui-text">
+                    <div>yono 的项目文档们</div>
+                    <p id="ref-1">主页有待施工......</p>
+                    </div>
+                </div>
             </div>
-        </div> -->
+        </body>
     </div>
 </div>
 
@@ -33,6 +38,7 @@ id: home_page
 
 <canvas id="backgroundCanvas" style="top:0; bottom:0; left:0; right:0; position:fixed; z-index: -99;">
 </canvas>
+
 <script>
     var isDark = false;
     function createCanvas(dark = null) {
