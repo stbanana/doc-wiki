@@ -12,10 +12,10 @@ id: home_page
 </div>
 
 <div id="fullpage">
-    <div class="section" style="height: 70vh;">
+    <div class="section" >
         <body class="layui-margin-5">
             <div class="layui-fluid">
-                <div class="layui-panel" style="height: 50vh;">
+                <div class="layui-panel">
                     <div class="layui-text" style="text-align: right;">
                         <h1>wiki</h1>
                         <em> yeah~ we got it! </em>
@@ -25,6 +25,7 @@ id: home_page
                     <div>yono's project docs</div>
                     <p id="ref-1">home page to be constructed......</p>
                     </div>
+                    <br><br>
                 </div>
             </div>
         </body>

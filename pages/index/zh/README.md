@@ -13,10 +13,10 @@ id: home_page
 
 
 <div id="fullpage">
-    <div class="section" style="height: 70vh;">
+    <div class="section" >
         <body class="layui-margin-5">
             <div class="layui-fluid">
-                <div class="layui-panel" style="height: 50vh;">
+                <div class="layui-panel" >
                     <div class="layui-text" style="text-align: right;">
                         <h1>wiki</h1>
                         <em> 好耶~ 我们找到了！ </em>
@@ -26,6 +26,7 @@ id: home_page
                     <div>yono 的项目文档们</div>
                     <p id="ref-1">主页有待施工......</p>
                     </div>
+                    <br><br>
                 </div>
             </div>
         </body>
