@@ -25,6 +25,17 @@
                 ]
             },
             {
+                "label": "协议文档",
+                "position": "left",
+                "type": "list",
+                "items": [
+                    {
+                        "url": "/HiLBase/zh_hans/",
+                        "label": "HiLBase"
+                    }
+                ]
+            },
+            {
                 "url": "https://www.yono233.cn",
                 "label": "博客",
                 "position": "right"

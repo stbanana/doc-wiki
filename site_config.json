@@ -9,7 +9,8 @@
     "route": {
         "docs": {
             "/modbusX/zh_hans/": "docs/modbusX/zh_hans",
-            "/Dataflow/zh_hans/": "docs/Dataflow/zh_hans"
+            "/Dataflow/zh_hans/": "docs/Dataflow/zh_hans",
+            "/HiLBase/zh_hans/": "docs/HiLBase/zh_hans"
         },
         "pages": {
             "/": "pages/index/zh"
