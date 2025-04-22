@@ -106,7 +106,12 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     
                 </div>
                 <ul class="show">
+<li class="not_active no_link sidebar_category"><span class="label">HiLBase</span></li>
 <li class="active with_link"><a href="/HiLBase/zh_hans/index.html"><span class="label">整体协议结构</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/HiLBase/zh_hans/系统指令.html"><span class="label">系统指令部分(00~1F)</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/HiLBase/zh_hans/矩阵配置.html"><span class="label">矩阵配置部分(20~3F)</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/HiLBase/zh_hans/仿真配置.html"><span class="label">仿真配置部分(40~5F)</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/HiLBase/zh_hans/运行强制指令.html"><span class="label">运行强制指令(60~7F)</span><span class=""></span></a></li>
 </ul>
 
             </div>
@@ -199,9 +204,9 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
   <th>事务号(2字节)</th>
   <th>CMD(2字节)</th>
   <th>拓展信息(2字节)</th>
-  <th>长度信息(2字节)</th>
+  <th>长度信息(大端2字节)</th>
   <th>消息(x字节)</th>
-  <th>和校验(2字节)</th>
+  <th>和校验(小端2字节)</th>
 </tr>
 </thead>
 <tbody>
@@ -231,9 +236,9 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
   <th>事务号(2字节)</th>
   <th>CMD(2字节)</th>
   <th>拓展信息(2字节)</th>
-  <th>长度信息(2字节)</th>
+  <th>长度信息(大端2字节)</th>
   <th>消息(2字节)</th>
-  <th>和校验(2字节)</th>
+  <th>和校验(小端2字节)</th>
 </tr>
 </thead>
 <tbody>
@@ -263,6 +268,11 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                         
                     </div>
                     <div id="next">
+                        
+                        <a href="/HiLBase/zh_hans/系统指令.html">
+                            <span class="label">系统指令部分(00~1F)</span>
+                            <span class="icon"></span>
+                        </a>
                         
                     </div>
                 </div>
