@@ -1,12 +1,17 @@
 items:
 -   label: HiLBase
+
 -   label: 整体协议结构
     file: README.md
+
 -   label: 系统指令部分(00~1F)
-    file: 系统指令.md
+    file: doc/系统指令.md
+
 -   label: 矩阵配置部分(20~3F)
-    file: 矩阵配置.md
+    file: doc/矩阵配置.md
+
 -   label: 仿真配置部分(40~5F)
-    file: 仿真配置.md
+    file: doc/仿真配置.md
+
 -   label: 运行强制指令(60~7F)
-    file: 运行强制指令.md
+    file: doc/运行强制指令.md
