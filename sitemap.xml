@@ -103,31 +103,31 @@
             <priority>1.0</priority>
         </url>
         <url>
-            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/系统指令.html</loc>
-            <lastmod>2025-04-22</lastmod>
-            <changefreq>weekly</changefreq>
-            <priority>1.0</priority>
-        </url>
-        <url>
-            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/矩阵配置.html</loc>
-            <lastmod>2025-04-22</lastmod>
-            <changefreq>weekly</changefreq>
-            <priority>1.0</priority>
-        </url>
-        <url>
             <loc>https://wiki.yono233.cn/HiLBase/zh_hans/index.html</loc>
             <lastmod>2025-04-22</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
-            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/运行强制指令.html</loc>
+            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/doc/系统指令.html</loc>
             <lastmod>2025-04-22</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
-            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/仿真配置.html</loc>
+            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/doc/矩阵配置.html</loc>
+            <lastmod>2025-04-22</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+        </url>
+        <url>
+            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/doc/运行强制指令.html</loc>
+            <lastmod>2025-04-22</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+        </url>
+        <url>
+            <loc>https://wiki.yono233.cn/HiLBase/zh_hans/doc/仿真配置.html</loc>
             <lastmod>2025-04-22</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1.0</priority>
