@@ -1,4 +1,5 @@
 items:
+-   label: modbusX
 -   label: spec
     file: README.md
 -   label: Library Features
