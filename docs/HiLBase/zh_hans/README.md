@@ -44,3 +44,6 @@ update_open: true
 - 00 10：当前状态忙，无法执行
 - 00 11：当前状态禁止执行
 
+## 整体的通信方式
+
+![ ](https://cloudflare-imgbed-6qt.pages.dev/file/1745822435960__RH[4X[OK0E6C5UIOV540MF.png)

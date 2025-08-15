@@ -10,7 +10,8 @@
         "docs": {
             "/modbusX/zh_hans/": "docs/modbusX/zh_hans",
             "/Dataflow/zh_hans/": "docs/Dataflow/zh_hans",
-            "/HiLBase/zh_hans/": "docs/HiLBase/zh_hans"
+            "/HiLBase/zh_hans/": "docs/HiLBase/zh_hans",
+            "/YoroMCU-OTA/zh_hans/": "docs/YoroMCU-OTA/zh_hans"
         },
         "pages": {
             "/": "pages/index/zh"

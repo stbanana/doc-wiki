@@ -32,6 +32,10 @@
                     {
                         "url": "/HiLBase/zh_hans/",
                         "label": "HiLBase"
+                    },
+                    {
+                        "url": "/YoroMCU-OTA/zh_hans/",
+                        "label": "YoroMCU-OTA"
                     }
                 ]
             },
