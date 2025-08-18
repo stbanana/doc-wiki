@@ -7,3 +7,6 @@ items:
 -   label: UART单对单包装
     file: doc/UART单对单包装.md
 
+-   label: CAN包装
+    file: doc/CAN包装.md
+

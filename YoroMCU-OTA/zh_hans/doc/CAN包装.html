@@ -109,8 +109,8 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 <ul class="show">
 <li class="not_active no_link sidebar_category"><span class="label">YoroMCU-OTA</span></li>
 <li class="not_active with_link"><a href="/YoroMCU-OTA/zh_hans/index.html"><span class="label">基础消息结构</span><span class=""></span></a></li>
-<li class="active with_link"><a href="/YoroMCU-OTA/zh_hans/doc/UART单对单包装.html"><span class="label">UART单对单包装</span><span class=""></span></a></li>
-<li class="not_active with_link"><a href="/YoroMCU-OTA/zh_hans/doc/CAN包装.html"><span class="label">CAN包装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/YoroMCU-OTA/zh_hans/doc/UART单对单包装.html"><span class="label">UART单对单包装</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/YoroMCU-OTA/zh_hans/doc/CAN包装.html"><span class="label">CAN包装</span><span class=""></span></a></li>
 </ul>
 
             </div>
@@ -154,86 +154,74 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     </div>
                     <div id="article_content">
                         
-                            <h1 id="UART%E5%8D%95%E5%AF%B9%E5%8D%95%E5%8C%85%E8%A3%85">UART单对单包装</h1>
+                            <h1 id="CAN%E5%8C%85%E8%A3%85">CAN包装</h1>
 <p>协议基础依然相同，不再过多介绍，必须先阅读<a href="/YoroMCU-OTA/zh_hans/"  >基础消息结构</a>。</p>
-<p>针对 UART 的单对单，不必考虑物理链路上的杂乱数据，也没有事实的广播，那么采用的包装仅需要针对串口进行长度指示和校验。</p>
-<h2 id="%E5%92%8C%E6%A0%A1%E9%AA%8C%E8%AF%B4%E6%98%8E">和校验说明</h2>
-<p>和校验实际有效是一字节，除了和校验及其取反的两个字节外，所有的帧内容相加后取最低字节是和校验内容。</p>
-<p>可与示例帧映证。</p>
+<p>针对 CAN 通信，由于有总线仲裁机制的存在，可以不必考虑总线竞争问题，天然支持单对多总线烧录。</p>
+<h2 id="%E5%AF%B9CAN%E6%80%BB%E7%BA%BF%E7%9A%84%E9%99%90%E5%88%B6">对CAN总线的限制</h2>
+<p>基于协议基础，必须以拓展帧收发 CAN 消息，<strong>控制消息(4字节)</strong>对应 CAN 帧 ID，<strong>额外信息(n字节)</strong>对应 CAN 帧数据最多为8个字节。</p>
 <h2 id="%E8%AF%B7%E6%B1%82%E5%8D%95%E5%B8%A7%E7%BB%93%E6%9E%84">请求单帧结构</h2>
 <table>
 <thead>
 <tr>
   <th>控制消息(4字节)</th>
-  <th>额外消息长度(2字节)</th>
   <th>额外消息(n字节)</th>
-  <th>和校验(1字节)</th>
-  <th>和校验取反(1字节)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td><strong>基础消息结构</strong></td>
-  <td>包装</td>
   <td><strong>基础消息结构</strong></td>
-  <td>包装</td>
-  <td>包装</td>
 </tr>
 </tbody>
 </table>
 <p>示例帧</p>
 
 <pre class="language-c"><code class="language-c">/* 控制信息 */
-05 FA 04 01
-
-/* 额外消息长度 */
-00 08
+05 FA 04 01 // 此为CAN帧ID
 
 /* 额外消息，无实际意义，握手时控制信息已经可以表达所有有效信息 */
-00 01 00 00 00 00 00 00
-
-/* 和校验及其取反 */
-0D F2
+00 01 00 00 00 00 00 00 // 此为CAN帧数据
 </code></pre>
 <h2 id="%E5%9B%9E%E5%A4%8D%E5%8D%95%E5%B8%A7%E7%BB%93%E6%9E%84">回复单帧结构</h2>
 <table>
 <thead>
 <tr>
   <th>控制消息(4字节)</th>
-  <th>回复状态长度(2字节)</th>
   <th>回复状态(8字节)</th>
-  <th>和校验(1字节)</th>
-  <th>和校验取反(1字节)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td><strong>基础消息结构</strong></td>
-  <td>包装(固定是00 08)</td>
   <td><strong>基础消息结构</strong></td>
-  <td>包装</td>
-  <td>包装</td>
 </tr>
 </tbody>
 </table>
 <p>示例帧 对上面握手消息的回复为</p>
 
 <pre class="language-c"><code class="language-c">/* 控制信息 */
-00 FA 80 41
-
-/* 回复状态长度 */
-00 08
+00 FA 80 41 // 此为CAN帧ID
 
 /* 回复状态 */
-00 01 00 06 00 00 00 00
-
-/* 和校验及其取反 */
-CA 35
+00 01 00 06 00 00 00 00 // 此为CAN帧数据
 </code></pre>
-<h2 id="%E7%83%A7%E5%BD%95%E6%B5%81%E7%A8%8B">烧录流程</h2>
+<h2 id="%E5%8D%95%E5%AF%B9%E5%8D%95%E7%83%A7%E5%BD%95%E6%B5%81%E7%A8%8B">单对单烧录流程</h2>
 <p>沿用<strong>基础消息结构</strong>中介绍过的最简烧录流程</p>
 <ol>
 <li><strong>0xFA 命令烧录</strong>(或者其他特有命令)，此时需要从APP跳入OTA程序</li>
+<li><strong>0xFA 再次命令烧录</strong>，作为ping功能，区别在于<strong>回复状态</strong>的头两个字节，跳转回复是00 01，而ping是00 02，表达已经在OTA程序中</li>
+<li><strong>0xF4 擦除指示</strong>，将固件需要的部分ROM全部擦掉</li>
+<li><strong>0xF7 首包指示</strong>，指示接下来的烧录起始、烧录长度、烧录校验</li>
+<li><strong>许多 0xF5 包</strong>，符合指示的长度，但是 OTA 会寄存最开始数个字节而不烧录，使得 APP 不完整。</li>
+<li><strong>反复进行 3、4 直到上位机认为完成</strong></li>
+<li><strong>此时 OTA 程序自校验</strong>是否长度、校验都符合，写入最开始的数个字节，使得 APP 完整。</li>
+<li><strong>0xF8 上位机发起重启跳转</strong>，接收到确认回复，完成烧录</li>
+</ol>
+<h2 id="%E5%8D%95%E5%AF%B9%E5%A4%9A%E5%B9%BF%E6%92%AD%E7%83%A7%E5%BD%95%E6%B5%81%E7%A8%8B">单对多广播烧录流程</h2>
+<p>在总线上广播烧录，需要解决总线抢占和非烧录机器的静默问题。非烧录机应该进行特定自有的静默态，仅监控接收而不在总线上发送消息，仅对退出静默态的命令进行处理。</p>
+<ol>
+<li><strong>0xFA 命令烧录</strong>(或者其他特有命令)，此时需要被烧录机从APP跳入OTA程序，非烧录机进入总线静默。</li>
+<li><strong>0xF3 命令统计记录</strong>，对实际需要烧录的机器进行记录，便于回复的校验。</li>
 <li><strong>0xFA 再次命令烧录</strong>，作为ping功能，区别在于<strong>回复状态</strong>的头两个字节，跳转回复是00 01，而ping是00 02，表达已经在OTA程序中</li>
 <li><strong>0xF4 擦除指示</strong>，将固件需要的部分ROM全部擦掉</li>
 <li><strong>0xF7 首包指示</strong>，指示接下来的烧录起始、烧录长度、烧录校验</li>
@@ -249,18 +237,13 @@ CA 35
                 <div id="previous_next">
                     <div id="previous">
                         
-                        <a href="/YoroMCU-OTA/zh_hans/index.html">
+                        <a href="/YoroMCU-OTA/zh_hans/doc/UART单对单包装.html">
                             <span class="icon"></span>
-                            <span class="label">基础消息结构</span>
+                            <span class="label">UART单对单包装</span>
                         </a>
                         
                     </div>
                     <div id="next">
-                        
-                        <a href="/YoroMCU-OTA/zh_hans/doc/CAN包装.html">
-                            <span class="label">CAN包装</span>
-                            <span class="icon"></span>
-                        </a>
                         
                     </div>
                 </div>
