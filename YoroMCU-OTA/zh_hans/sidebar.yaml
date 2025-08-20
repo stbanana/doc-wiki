@@ -10,3 +10,5 @@ items:
 -   label: CAN包装
     file: doc/CAN包装.md
 
+-   label: 项目源码
+    url: https://github.com/stbanana/YoroMCU-OTA
