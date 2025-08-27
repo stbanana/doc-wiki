@@ -159,12 +159,13 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <p>协议基础依然相同，不再过多介绍，必须先阅读<a href="/YoroMCU-OTA/zh_hans/"  >基础消息结构</a>。</p>
 <p>针对 UART 的单对单，不必考虑物理链路上的杂乱数据，也没有事实的广播，那么采用的包装仅需要针对串口进行长度指示和校验。</p>
 <h2 id="%E5%92%8C%E6%A0%A1%E9%AA%8C%E8%AF%B4%E6%98%8E">和校验说明</h2>
-<p>和校验实际有效是一字节，除了和校验及其取反的两个字节外，所有的帧内容相加后取最低字节是和校验内容。</p>
+<p><strong>和校验实际有效是一字节，除了帧头的两个字节外</strong>，所有的帧内容相加后取最低字节是和校验内容。</p>
 <p>可与示例帧映证。</p>
 <h2 id="%E8%AF%B7%E6%B1%82%E5%8D%95%E5%B8%A7%E7%BB%93%E6%9E%84">请求单帧结构</h2>
 <table>
 <thead>
 <tr>
+  <th>帧头(2字节)</th>
   <th>控制消息(4字节)</th>
   <th>额外消息长度(2字节)</th>
   <th>额外消息(n字节)</th>
@@ -174,6 +175,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 </thead>
 <tbody>
 <tr>
+  <td>FE EF</td>
   <td><strong>基础消息结构</strong></td>
   <td>包装</td>
   <td><strong>基础消息结构</strong></td>
@@ -184,7 +186,10 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 </table>
 <p>示例帧</p>
 
-<pre class="language-c"><code class="language-c">/* 控制信息 */
+<pre class="language-c"><code class="language-c">/* 帧头 */
+FE EF
+
+/* 控制信息 */
 05 FA 04 01
 
 /* 额外消息长度 */
@@ -200,6 +205,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <table>
 <thead>
 <tr>
+  <th>帧头(2字节)</th>
   <th>控制消息(4字节)</th>
   <th>回复状态长度(2字节)</th>
   <th>回复状态(8字节)</th>
@@ -209,6 +215,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 </thead>
 <tbody>
 <tr>
+  <td>FE EF</td>
   <td><strong>基础消息结构</strong></td>
   <td>包装(固定是00 08)</td>
   <td><strong>基础消息结构</strong></td>
@@ -219,7 +226,10 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 </table>
 <p>示例帧 对上面握手消息的回复为</p>
 
-<pre class="language-c"><code class="language-c">/* 控制信息 */
+<pre class="language-c"><code class="language-c">/* 帧头 */
+FE EF
+
+/* 控制信息 */
 00 FA 80 41
 
 /* 回复状态长度 */
