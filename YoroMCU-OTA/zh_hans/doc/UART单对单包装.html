@@ -166,7 +166,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 <thead>
 <tr>
   <th>帧头(2字节)</th>
-  <th>控制消息(4字节)</th>
+  <th>控制消息(4字节 小端32位)</th>
   <th>额外消息长度(小端2字节)</th>
   <th>额外消息(n字节)</th>
   <th>和校验(1字节)</th>
@@ -190,7 +190,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
 FE EF
 
 /* 控制信息 */
-05 FA 04 01
+01 04 FA 05
 
 /* 额外消息长度 */
 08 00 
@@ -230,7 +230,7 @@ FE EF
 FE EF
 
 /* 控制信息 */
-00 FA 80 41
+41 80 FA 00
 
 /* 回复状态长度 */
 08 00 
